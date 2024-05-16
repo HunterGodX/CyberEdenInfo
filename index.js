@@ -25,14 +25,14 @@ client.on('ready', async () => {
   const r = new Discord.RichPresence()
     .setApplicationId('1164997553541107762')
     .setType('STREAMING')
-    .setURL('https://www.youtube.com/watch?v=6f2uhNDMX-Y&t=37s') //Must be a youtube video link 
+    .setURL('https://www.youtube.com/watch?v=PK2lYJoaq7Y') //Must be a youtube video link 
     .setState('to "𝕊𝕝𝕒𝕪 𝔼𝕧𝕖𝕣𝕪𝕕𝕒𝕪"')
     .setName('in 💥🅲🆈🅱🅴🆁 🅴🅳🅴🅽✨')
     .setDetails(`@𝟑𝟐𝐊[${formatTime()}]`)
     .setStartTimestamp(Date.now())
- .setAssetsLargeImage('https://media.discordapp.net/attachments/1016845411895488532/1142051842126262312/cybereden-cyber.gif?ex=66469169&is=66453fe9&hm=a7436d30eef756c82eec06c431fbc42e63a051276b55c0401e94066f76595eb3&=')
+ .setAssetsLargeImage('https://i.postimg.cc/SxqpT5bv/LogoA.gif')
     .setAssetsLargeText('Join in 💥🅲🆈🅱🅴🆁 🅴🅳🅴🅽✨')
-    .setAssetsSmallImage('https://media.discordapp.net/attachments/1016845411895488532/1142051842499563591/verified-verificado.gif?ex=66469169&is=66453fe9&hm=3301ad1c1948c7e735945c3e2bb4ace2f5200aca365ac5be0f951bd6a82895a3&=')
+    .setAssetsSmallImage('https://i.postimg.cc/rwMw0jg5/Verify-Blue.gif')
     .setAssetsSmallText('𝑽𝒆𝒓𝒊𝒇𝒊𝒆𝒅')
     .addButton('Join the Discord Server', 'https://discord.gg/invite/muamGJmVju')
     .addButton('Add me on Facebook', 'https://www.facebook.com/ritwik.rahman1');
