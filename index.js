@@ -1,9 +1,7 @@
 const Discord = require('discord.js-selfbot-v13');
 const client = new Discord.Client({
   readyStatus: false,
-  checkUpdate: false,
-  // REPLACE THE PREVIOUS INTENTS ARRAY WITH THIS LINE
-  intents: new Discord.Intents(32767) // This bitfield enables all non-privileged intents for Discord.js v13
+  checkUpdate: false
 });
 
 const keepAlive = require('./server.js');
@@ -27,10 +25,10 @@ client.on('ready', async () => {
   const r = new Discord.RichPresence()
     .setApplicationId('1164997553541107762')
     .setType('STREAMING')
-    .setURL('YOUR_YOUTUBE_VIDEO_LINK_HERE') // MUST BE A VALID YOUTUBE VIDEO LINK (e.g., https://www.youtube.com/watch?v=your_video_id)
+    .setURL('https://www.youtube.com/watch?v=sJTKbGypGAg') // MUST BE A VALID YOUTUBE VIDEO LINK (e.g., https://www.youtube.com/watch?v=your_video_id)
     .setState('to "𝕊𝕝𝕒𝕪 𝔼𝕧𝕖𝕣𝕪𝕕𝕒𝕪"')
     .setName('in 💥🅲🆈🅱🅴🆁 🅴🅳🅴🅽✨')
-    .setDetails(`𝑳𝒊𝒇𝒆![${formatTime()}]`)
+    .setDetails(`𝑳𝒊𝒇𝒆![${formatTime()}]`) // Changed initial detail to match subsequent updates
     .setStartTimestamp(Date.now())
     .setAssetsLargeImage('https://i.postimg.cc/SxqpT5bv/LogoA.gif')
     .setAssetsLargeText('Join in 💥🅲🆈🅱🅴🆁 🅴🅳🅴🅽✨')
@@ -40,6 +38,7 @@ client.on('ready', async () => {
     .addButton('Add me on Facebook', 'https://www.facebook.com/ritwik.rahman1');
 
   client.user.setActivity(r);
+  // Removed client.user.setPresence({ status: "idle" }); as STREAMING type implies online status.
 
   let prevTime = null;
   setInterval(() => {
