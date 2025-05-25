@@ -25,12 +25,12 @@ client.on('ready', async () => {
   const r = new Discord.RichPresence()
     .setApplicationId('1164997553541107762')
     .setType('STREAMING')
-    .setURL('https://www.youtube.com/watch?v=PK2lYJoaq7Y') //Must be a youtube video link 
+    .setURL('https://www.youtube.com/watch?v=PK2lYJoaq7Y') // MUST BE A VALID YOUTUBE VIDEO LINK (e.g., https://www.youtube.com/watch?v=your_video_id)
     .setState('to "𝕊𝕝𝕒𝕪 𝔼𝕧𝕖𝕣𝕪𝕕𝕒𝕪"')
     .setName('in 💥🅲🆈🅱🅴🆁 🅴🅳🅴🅽✨')
-    .setDetails(`@𝟑𝟐𝐊[${formatTime()}]`)
+    .setDetails(`𝑳𝒊𝒇𝒆![${formatTime()}]`)
     .setStartTimestamp(Date.now())
- .setAssetsLargeImage('https://i.postimg.cc/SxqpT5bv/LogoA.gif')
+    .setAssetsLargeImage('https://i.postimg.cc/SxqpT5bv/LogoA.gif')
     .setAssetsLargeText('Join in 💥🅲🆈🅱🅴🆁 🅴🅳🅴🅽✨')
     .setAssetsSmallImage('https://i.postimg.cc/rwMw0jg5/Verify-Blue.gif')
     .setAssetsSmallText('𝑽𝒆𝒓𝒊𝒇𝒊𝒆𝒅')
@@ -38,7 +38,6 @@ client.on('ready', async () => {
     .addButton('Add me on Facebook', 'https://www.facebook.com/ritwik.rahman1');
 
   client.user.setActivity(r);
-  client.user.setPresence({ status: "idle" }); //dnd, online, idle, offline
 
   let prevTime = null;
   setInterval(() => {
