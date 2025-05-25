@@ -1,7 +1,15 @@
 const Discord = require('discord.js-selfbot-v13');
 const client = new Discord.Client({
   readyStatus: false,
-  checkUpdate: false
+  checkUpdate: false,
+  // ADD THIS LINE AND THE INTENTS ARRAY BELOW
+  intents: [
+    Discord.Intents.FLAGS.GUILDS, // Required for guild-related events
+    Discord.Intents.FLAGS.GUILD_MESSAGES, // Often needed even if not explicitly handling messages
+    Discord.Intents.FLAGS.GUILD_PRESENCES, // Essential for presence updates
+    Discord.Intents.FLAGS.DIRECT_MESSAGES // For direct message handling
+    // You can add more intents from Discord.Intents.FLAGS if your self-bot needs them
+  ]
 });
 
 const keepAlive = require('./server.js');
@@ -25,7 +33,7 @@ client.on('ready', async () => {
   const r = new Discord.RichPresence()
     .setApplicationId('1164997553541107762')
     .setType('STREAMING')
-    .setURL('https://www.youtube.com/watch?v=PK2lYJoaq7Y') // MUST BE A VALID YOUTUBE VIDEO LINK (e.g., https://www.youtube.com/watch?v=your_video_id)
+    .setURL('YOUR_YOUTUBE_VIDEO_LINK_HERE') // MUST BE A VALID YOUTUBE VIDEO LINK (e.g., https://www.youtube.com/watch?v=your_video_id)
     .setState('to "𝕊𝕝𝕒𝕪 𝔼𝕧𝕖𝕣𝕪𝕕𝕒𝕪"')
     .setName('in 💥🅲🆈🅱🅴🆁 🅴🅳🅴🅽✨')
     .setDetails(`𝑳𝒊𝒇𝒆![${formatTime()}]`)
